@@ -34,6 +34,7 @@ const polybiusModule = (function () {
   }
 
   function polybius(input, encode = true) {
+    input = input.toLowerCase();
     result_string = "";
     if (encode === true) {
       for (let i = 0; i < input.length; i++) {
@@ -57,9 +58,8 @@ const polybiusModule = (function () {
   }
 
   return {
-    polybius,create_polybius_grid,
+    polybius,create_polybius_grid,decode_polybius,
   };
 })();
 
 module.exports = { polybius: polybiusModule.polybius };
-
